@@ -280,8 +280,8 @@ gboolean callUpdateDisplay(gpointer data)
     Browser* browser = reinterpret_cast<Browser*>(data);
 
     assert(browser->m_displayUpdateScheduled);
-    browser->m_displayUpdateScheduled = false;
     browser->updateDisplay();
+    browser->m_displayUpdateScheduled = false;
     return 0;
 }
 
